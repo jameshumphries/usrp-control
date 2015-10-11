@@ -10,7 +10,7 @@ print-%  : ; @echo $* = $($*)
 all: usrp-control
 
 usrp-control: main.cpp
-	$(CC) -g -o usrp-control main.cpp $(CFLAGS) $(LDLIBS) -lboost_system
+	$(CC) -g -o usrp-control main.cpp $(CFLAGS) $(LDLIBS) -lboost_system -lboost_program_options
 
 clean:
 	rm -f *.o usrp-control
